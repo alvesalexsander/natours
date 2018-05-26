@@ -1,0 +1,164 @@
+.card{
+    height: 50rem;
+    position: relative;
+    perspective: 150rem;
+    
+    &__side{
+        position: absolute;
+        height: 50rem;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: #fff;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+        border-radius: 3px;
+        
+        
+        &--front{
+            box-shadow: 0 2rem 4rem rgba($color-black, .15);
+            color: $color-grey;
+            
+        }
+        
+        &--back{
+            transform: rotateY(180deg);
+            box-shadow: 0 2rem 4rem rgba($color-black, .15);
+            
+            &--1{
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            
+            &--2{
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            
+            &--3{
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+        }
+    }
+    
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+    
+    &__picture{
+        height: 23rem;
+        -webkit-background-blend-mode: screen;
+        background-blend-mode: screen;
+        background-size: cover;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        
+        &--1{
+            background-image: linear-gradient(to right bottom,
+                $color-secondary-light,
+                $color-secondary-dark),
+                url(../img/nat-5.jpg);
+            
+        }
+        
+        &--2{
+            background-image: linear-gradient(to right bottom,
+                $color-primary-light,
+                $color-primary-dark),
+                url(../img/nat-6.jpg);
+        }
+        
+        &--3{
+            background-image: linear-gradient(to right bottom,
+                $color-tertiary-light,
+                $color-tertiary-dark),
+                url(../img/nat-7.jpg);
+        }
+    }
+    
+    &__heading{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 14rem;
+        right: 2rem;
+        float: right;
+        width: 46%;
+    }
+    
+    &__heading-span{
+        padding: 1rem 1rem;
+        color: $color-white;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        &--1{
+            background-image: linear-gradient(to right bottom,
+                rgba($color-secondary-light, .85),
+                rgba($color-secondary-dark, .85));
+        }
+        
+        &--2{
+            background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, .85),
+                rgba($color-primary-dark, .85));
+        }
+        
+        &--3{
+            background-image: linear-gradient(to right bottom,
+                rgba($color-tertiary-light, .85),
+                rgba($color-tertiary-dark, .85));
+        }
+        
+    }
+    
+    &__details{
+        margin-top: 1rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            
+            li{
+                text-align: center;
+                padding: 1rem;
+                
+                &:not(:last-child){
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+    }
+    
+    &__price-box{
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        width: 90%;
+        
+        &--only{
+            font-size: 1.6rem;
+            
+        }
+        
+        &--value{
+            font-size: 6rem;
+            font-weight: 100;
+            
+        }
+    }
+}
+
+.all-tours{
+    text-align: center;
+    text-transform: uppercase;
+    &__btn{
+        
+        
+    }
+}

@@ -1,0 +1,19 @@
+@mixin btn-default-props{
+    display:inline-block;
+    border-radius: $btn-border-radius;
+}
+
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin center-h-v{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
