@@ -1,6 +1,11 @@
 .form{
     width: 45%;
     
+    @include responsive(tab-port){
+        width: 100%;
+        text-align: center;
+    }
+    
     &__group:not(:last-child){
         margin-bottom: 2rem;
     }
@@ -17,6 +22,11 @@
             width: 80%;
             display: block;
             transition: all .5s ease;
+            
+            @include responsive(tab-port){
+                background-color: rgba($color-white, .9);
+                width: 100%;
+            }
         
             &:focus{
                 border-bottom: 3px solid $color-primary;
@@ -64,6 +74,10 @@
         cursor: pointer;
         position: relative;
         padding-left: 2rem;
+        
+        @include responsive(tab-port){
+            font-size: 2rem;
+        }
     }
     
     &__radio-button{
@@ -75,6 +89,11 @@
         position: absolute;
         left: -3.5rem;
         top: -.5rem;
+        
+        @include responsive(tab-port){
+            height: 4rem;
+            width: 4rem;
+        }
         
         &::after{
             content: "";

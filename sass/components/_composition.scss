@@ -1,6 +1,10 @@
 .composition{
     position: relative;
     
+    @include responsive(tab-port){
+        z-index: 20;
+    }
+    
     &__photo{
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
