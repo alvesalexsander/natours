@@ -8,18 +8,6 @@
 
 html{
     font-size: 62.5%;
-    
-    @include responsive(tab-land){
-        font-size: 45%;
-    }
-    
-    @include responsive(tab-port){
-        font-size: 40%;
-    }
-    
-    @include responsive(phone){
-        font-size: 35%;
-    }
 }
 
 body{
@@ -30,8 +18,4 @@ body{
     color: $color-grey;
     padding: 3rem;
     box-sizing: border-box;
-    
-    @include responsive(phone){
-        padding: 0;
-    }
 }

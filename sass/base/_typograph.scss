@@ -4,10 +4,7 @@
 
 .heading-primary{
     color: #fff;
-    text-transform: uppercase;
     margin-bottom: 6rem;
-    backface-visibility: hidden;
-    
     
     &--main{
         display: block;
@@ -17,11 +14,6 @@
         animation-name: moveInLeft;
         animation-duration: 1s;
         transition-timing-function: ease-out;
-        
-        @include responsive(phone){
-            letter-spacing: 1rem;
-            font-size: 5rem;
-        }
     }
     
     &--sub{
@@ -46,14 +38,6 @@
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
-    
-    @include responsive(tab-port){
-        font-size: 3rem;
-    }
-    
-    @include responsive(phone){
-        font-size: 2.5rem;   
-    }
     
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);

@@ -4,14 +4,6 @@
     font-size: 1.4rem;
     color: $color-grey-dark;
     
-    @include responsive(tab-port){
-        padding: 8rem 0;
-    }
-    
-    .row .col-1-of-2{
-        margin-bottom: 0;
-    }
-    
     &__logo-box{
         text-align: center;
     }
@@ -25,12 +17,6 @@
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block;
-        
-        @include responsive(tab-port){
-            width: 100%;
-            text-align: center;
-            border-top: 0;
-        }
     }
     
     &__list{
@@ -70,15 +56,5 @@
         display: inline-block;
         width: 80%;
         float: right;
-        
-        
-        width: 100%;
-        text-align: center;
-        float: none;
-        
-        @include responsive(tab-port){
-            border-top: 0;
-        }
-        
     }
 }
